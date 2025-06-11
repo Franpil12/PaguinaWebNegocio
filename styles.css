@@ -1,4 +1,4 @@
-/* General reset */
+
 * {
   margin: 0;
   font-size: flex;
@@ -12,7 +12,7 @@ body {
   color: #333;
 }
 
-/* Header */
+
 header {
   background-color: #f8f9fa;
   padding: 10px 20px;
@@ -40,7 +40,7 @@ header {
 }
 
 .burger {
-  display: none; /* lo puedes activar con media queries */
+  display: none; 
 }
 
 .header-nav-container {
@@ -52,7 +52,6 @@ header {
   margin-top: 10px;
 }
 
-/* Menú de navegación */
 .nav-links {
   list-style: none;
   display: flex;
@@ -68,7 +67,6 @@ header {
   font-weight: 500;
 }
 
-/* Botones de autenticación */
 .auth-buttons {
   display: flex;
   gap: 10px;
@@ -87,7 +85,6 @@ header {
   background-color: #1b5e20;
 }
 
-/* Hero section */
 .hero {
   display: flex;
   justify-content: space-between;
