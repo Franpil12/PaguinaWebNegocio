@@ -165,25 +165,28 @@ footer a {
   width: 100%;
   overflow: hidden;
   position: relative;
-  height: 400px; /* puedes ajustar el alto */
+  height: 350px; /* ajusta según tus imágenes */
   margin-bottom: 20px;
 }
 
 .carousel-track {
   display: flex;
-  width: max-content;
-  animation: scroll 20s linear infinite;
+  animation: scroll-carousel 30s linear infinite;
 }
 
 .carousel-track img {
   width: 35vw;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
-/* Animación de desplazamiento */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+/* Animación continua */
+@keyframes scroll-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-105vw); /* ajustado a velocidad e imágenes */
+  }
 }
-
