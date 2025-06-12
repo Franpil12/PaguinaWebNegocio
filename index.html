@@ -2,58 +2,113 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evernote - Página Principal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SignaLink - Inclusión con Tecnología</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+
+  <!-- Encabezado -->
   <header>
     <div class="logo-container">
-      <img src="/Imagenes/logoLink.jpeg" alt="Logo de Evernote" class="logo-img">
-      <div class="logo">SignaLink</div>
-
+      <img src="imagenes/logoLink.jpeg" alt="Logo SignaLink" class="logo-img">
+      <h1 class="logo">SignaLink</h1>
       <div class="burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
     </div>
-
-    <div class="header-nav-container">
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#">Planes</a></li>
-          <li><a href="#">Funciones</a></li>
-          <li><a href="#">Ayuda y Aprendizaje</a></li>
-          <li><a href="#">Acerca de Nosotros</a></li>
-        </ul>
-      </nav>
-
+    <nav class="header-nav-container">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#foda">FODA</a></li>
+        <li><a href="#app">App</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
       <div class="auth-buttons">
         <a href="#" class="btn-auth">Regístrate</a>
         <a href="#" class="btn-auth">Iniciar sesión</a>
       </div>
-    </div>
+    </nav>
   </header>
 
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="imagenes/aplicaciones-para-personas-con-sordera.jpg" alt="Imagen 1">
+      <img src="imagenes/Aplicaciones-que-facilitan-la-comunicacion.jpg" alt="Imagen 2">
+      <img src="imagenes/image-1024x474.png" alt="Imagen 3">
+      <img src="imagenes/aplicaciones-para-personas-con-sordera.jpg" alt="Imagen 1">
+      <img src="imagenes/Aplicaciones-que-facilitan-la-comunicacion.jpg" alt="Imagen 2">
+      <img src="imagenes/image-1024x474.png" alt="Imagen 3">
+      <!-- Puedes agregar más -->
+    </div>
+  </div>
+
+  <!-- Sección Hero -->
   <section class="hero">
     <div class="hero-text">
-      <h1>El futuro es ahora<br>Ahora todos somos iguales</h1>
-      <p>
-        SignaLink es un emprendimiento social y tecnológico. 
-        Tiene como objetivo la inclusión social, pero se apoya 
-        en el desarrollo tecnológico de punta, como el uso de 
-        inteligencia artificial (IA), reconocimiento de imágenes 
-        y aprendizaje automático para traducir lenguaje de señas 
-        a texto y voz en tiempo real.
-      </p>
+      <h2>El futuro es ahora</h2>
+      <p>SignaLink utiliza inteligencia artificial para traducir lenguaje de señas a texto y voz en tiempo real. Es inclusión, innovación y accesibilidad desde Ecuador para el mundo.</p>
       <a href="#" class="cta-button">Regístrate gratis</a>
     </div>
     <div class="hero-image">
-      <img src="/Imagenes/logoLink.jpeg" alt="Vista previa de la app Evernote en dispositivos">
+      <img src="imagenes/logoLink.jpeg" alt="Vista previa de la app SignaLink">
     </div>
   </section>
+
+  <!-- Introducción -->
+  <section class="section" id="introduccion">
+    <h2>Introducción</h2>
+    <p>En Ecuador, la comunidad sorda enfrenta desafíos importantes para acceder a la educación y servicios. SignaLink es una propuesta universitaria de impacto social y tecnológico que busca resolver este problema usando IA, LSEC y tecnologías accesibles.</p>
+  </section>
+
+  <!-- Objetivos -->
+  <section class="section" id="objetivos">
+    <h2>Objetivos</h2>
+    <h3>General</h3>
+    <p>Presentar el funcionamiento y visión de SignaLink como un proyecto real y sustentable.</p>
+    <h3>Específicos</h3>
+    <ul>
+      <li>Dar a conocer la propuesta tecnológica.</li>
+      <li>Resaltar las ventajas y potencial de crecimiento.</li>
+      <li>Mostrar análisis y planificación detallada.</li>
+    </ul>
+  </section>
+
+  <!-- Características -->
+  <section class="section" id="caracteristicas">
+    <h2>Características del Producto</h2>
+    <ul>
+      <li>Traducción bidireccional (señas ↔ texto/voz).</li>
+      <li>Módulo educativo gamificado con certificaciones.</li>
+      <li>Compatible con dispositivos económicos.</li>
+      <li>Accesibilidad: contraste alto, tipografía disléxica y comandos por voz.</li>
+      <li>Funciona sin conexión (modo offline).</li>
+    </ul>
+  </section>
+
+  <!-- Análisis FODA -->
+  <section class="section" id="foda">
+    <h2>Análisis FODA</h2>
+    <div class="foda-grid">
+      <div><h3>Fortalezas</h3><ul><li>Adaptación local al Ecuador.</li><li>Participación de la comunidad.</li><li>Colaboración interdisciplinaria.</li></ul></div>
+      <div><h3>Oportunidades</h3><ul><li>Fondo de innovación y digitalización.</li><li>Expansión regional.</li></ul></div>
+      <div><h3>Debilidades</h3><ul><li>Presupuesto limitado inicial.</li><li>Dependencia de voluntarios.</li></ul></div>
+      <div><h3>Amenazas</h3><ul><li>Competencia extranjera.</li><li>Falta de apoyo institucional.</li></ul></div>
+    </div>
+  </section>
+
+  <!-- App -->
+  <section class="section" id="app">
+    <h2>La App</h2>
+    <p>SignaLink se desarrolló con herramientas como Android Studio, TensorFlow y Figma. Incluye pruebas piloto con usuarios reales para garantizar accesibilidad y funcionalidad.</p>
+  </section>
+
+  <!-- Pie de página -->
+  <footer id="contacto">
+    <p>© 2025 SignaLink - Desarrollado por Pillajo Franco Ariel</p>
+    <p><a href="#">Asistencia y Ayuda</a></p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
