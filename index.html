@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ister-ChtaBot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 m-0 p-0 font-sans">
+    <div class="w-full max-w-none mx-0 mt-6 bg-white rounded-lg shadow-lg border border-gray-200">
+        
+        <div class="bg-white-900 text-blue-800 py-2 px-4 flex justify-between items-center rounded-t-lg">
+            <div class="flex items-center space-x-4">
+                <img src="imagenes/logo-ister.png" alt="Logo Rumiñahui" class="h-12">
+                <span class="font-bold text-lg">UNIVERSITARIO RUMIÑAHUI</span>
+            </div>
+            <div class="text-sm">
+                Información <span class="mx-2">|</span> <span class="font-bold">(+593) 2 2331628</span> <span class="mx-2">|</span> <span class="font-bold">info@ister.edu.ec</span>
+            </div>
+        </div>
+
+        <div class="bg-blue-800 text-white rounded-b-lg relative flex justify-center items-center" style="height: 450px;">
+           
+            <div class="relative w-full h-full flex items-center justify-center">
+                <img id="carousel-img" src="imagenes/imagen1.png" alt="Evento" class="absolute top-0 left-0 w-full h-full object-contain">
+                
+                <button id="prev-btn" class="absolute top-1/2 left-8 transform -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-90 text-blue-900 rounded-full p-2 shadow-lg z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                
+                <button id="next-btn" class="absolute top-1/2 right-8 transform -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-90 text-blue-900 rounded-full p-2 shadow-lg z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                </button>
+            </div>
+        </div>
+
+        
+        <div class="py-8 px-8">
+            <h3 class="text-2xl font-bold text-blue-900 mb-6 text-center">MAESTRIAS TECNOLOGICAS</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-blue-50 p-4 rounded shadow">
+                    <div class="font-bold text-blue-900">Maestría tecnológica en extracción, levantamiento y tratamiento de crudos pesados</div>
+                    <div class="text-sm text-gray-700">La maestría está dirigida a titulados en minería o áreas afines, con experiencia mínima de un año, y deben cumplir el proceso de admisión. Títulos del extranjero deben estar apostillados o legalizados.</div>
+                    <div class="mt-2 font-semibold text-blue-800">Duración de la carrera: 10 Meses</div>
+                </div>
+                <div class="bg-blue-50 p-4 rounded shadow">
+                    <div class="font-bold text-blue-900">Maestria tecnologica en entornos digitales para la educacion </div>
+                    <div class="text-sm text-gray-700">Dirigida a profesionales en educación o con experiencia afín; títulos del extranjero deben estar legalizados.</div>
+                    <div class="mt-2 font-semibold text-blue-800">Duración de la carrera: 10 Meses</div>
+                </div>
+                <div class="bg-blue-50 p-4 rounded shadow">
+                    <div class="font-bold text-blue-900">Maestria en herramientas digitales para la direccion de medios</div>
+                    <div class="text-sm text-gray-700">La maestría está dirigida a profesionales con título tecnológico superior en ciencias sociales, periodismo o áreas afines, o con un año de experiencia relacionada. Los títulos extranjeros deben estar apostillados o
+                         legalizados para inscribirse.</div>
+                    <div class="mt-2 font-semibold text-blue-800">Duración de la carrera: 10 Meses</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="flex flex-col md:flex-row items-center justify-between px-8 pb-8">
+            
+            <div class="text-blue-900 font-semibold mt-4 md:mt-0">
+                Para mas información: investigacion@ister.edu.ec
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="w-full text-center py-4 mt-10 bg-blue-900 text-white text-sm">
+        © 2025 Universitario Rumiñahui. Todos los derechos reservados.
+    </footer>
+
+ 
+    <script>
+       
+        const images = [
+            'imagenes/imagen1.png',
+            'imagenes/imagen2.png',
+            'imagenes/imagen3.png'
+        ];
+        let current = 0;
+        const img = document.getElementById('carousel-img');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        function showImage(idx) {
+            img.src = images[idx];
+        }
+        prevBtn.onclick = () => {
+            current = (current - 1 + images.length) % images.length;
+            showImage(current);
+        };
+        nextBtn.onclick = () => {
+            current = (current + 1) % images.length;
+            showImage(current);
+        };
+
+        setInterval(() => {
+            current = (current + 1) % images.length;
+            showImage(current);
+        }, 5000);
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+        createChat({
+            webhookUrl: 'http://localhost:5678/webhook/4ccaa0b9-0308-4906-8904-36d34d658b94/chat',
+            initialMessages: ['¡Soy Ister Ia, tu asistente!',' Te ayudaré el día de hoy.'],
+            i18n: {
+                en: {
+                title: "Hola! 👋",
+                subtitle: "Soy tu Ayudante2 24/7",
+                footer: "",
+                getStarted: "New Conversation",
+                inputPlaceholder: "Type your question..",
+                closeButtonTooltip: "Close chat"
+                }
+            }
+            
+        });
+    </script>
+</body>
+</html>
